@@ -2,4 +2,4 @@
 
 The simple init system in C++
 
-License: FreeBSD license
+License: FreeBSD license/GPLv3
