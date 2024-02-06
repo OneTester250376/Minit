@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2024 OneTeste250376
+ *
+ * License:BSD-2, GPLv3
+ */
 #include <iostream>
 #include <string>
 #include <unistd.h>
@@ -7,7 +12,6 @@ int main() {
     std::string rc_service_path = "/etc/rc/";
     std::string rc_service_conf = "/etc/rc/init.conf";
     std::string version = "0.1.0";
-    // std::cout << "Wellcome to Minit" << version;
     if (getpid() != 1) {
         return 1;
     }
