@@ -7,6 +7,9 @@
 #include <string>
 #include <unistd.h>
 #include <fstream>
+#include <cstdlib>
+
+static char *const rcinitcmd[]     = { "/bin/rc.init", NULL };
 
 int main() {
     std::string rc_service_path = "/etc/rc/";
@@ -34,6 +37,10 @@ int main() {
         } else {
             std::cerr << "Error: Invalid action '" << action << "' for service '" << service_name << "'" << std::endl;
         }
+    }
+    if (system("/bin/rc.init") == -1) {
+        perror("system");
+        return 1;
     }
     return 0;
 }
