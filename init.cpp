@@ -21,7 +21,7 @@
 int main() {
     std::string rc_service_path = "/etc/rc/";
     std::string rc_service_conf = "/etc/rc/init.conf";
-    std::string version = "0.1.0";
+    std::string version = "0.1.1a1";
     if (getpid() != 1) {
         return 1;
     }
